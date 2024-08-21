@@ -16,9 +16,11 @@ import Loader from '../Loader/Loader';
 import { login } from '../../../API';
 import { useSelector } from 'react-redux';
 import { locales } from '../../../locales';
+import { useNavigate } from 'react-router-dom/dist';
 
 export const LoginForm = () => {
     const {language} = useSelector(state => state.actionReducer)
+    const navigate = useNavigate()
     const [showPassword, setShowPassword] = useState(false);
     const [errorMessage, setErrorMessage] = useState('')
     const [isLoading, setIsLoading] = useState(false);
@@ -63,6 +65,7 @@ export const LoginForm = () => {
             .then(response => {
                 if (response.status === 200) {
                     console.log(response)
+                    navigate('/home')
                 } else {
                     setErrorMessage(response.message)
                 }

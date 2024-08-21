@@ -17,8 +17,6 @@ export default function AppRouter(props) {
                 <Routes>
                     <Route path="/" element={<StartPage {...props} />} />
                     <Route path="/home" element={<HomePage {...props} />} />
-                    <Route path="/error" element={<ErrorPage {...props} />} />
-                    <Route path="/success" element={<SuccessPage {...props} />} />
                 </Routes>
             </Wrapper>
         </BrowserRouter>
