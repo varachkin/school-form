@@ -46,7 +46,8 @@
 }
 
 .subtitle{
-    font-size: 5vw;
+    font-size: 3vw;
+    color: rgb(97, 2, 2);
     width: 80%;
     text-align: center;
     margin: 0 auto;
