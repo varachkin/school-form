@@ -1,4 +1,4 @@
-.form{
+.form {
     width: 95%;
     margin: 0 auto;
     display: flex;
@@ -7,7 +7,7 @@
     justify-content: center;
     gap: 5vw;
     padding: 10vw 7vw;
-    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, #00d5ff33 0%, #006aed4a 100.2% );
+    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, #00d5ff33 0%, #006aed4a 100.2%);
     backdrop-filter: blur(8px);
     border-radius: 5vw;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
@@ -23,10 +23,26 @@
     padding: 1.5vw;
     border: none;
     background: none; */
-    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(21, 44, 49, 0.233) 0%, rgba(19, 35, 54, 0.322) 100.2% );
+    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, rgba(21, 44, 49, 0.233) 0%, rgba(19, 35, 54, 0.322) 100.2%);
     /* backdrop-filter: blur(8px); */
     color: rgb(190, 190, 190) !important;
+    color: #a3a3a3;
     box-sizing: border-box;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #a3a3a3 !important;
+    background-color: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
 }
 
 .form button {

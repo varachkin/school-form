@@ -26,25 +26,61 @@ export const LoginForm = () => {
         event.preventDefault();
     };
 
-    const handleSendData = ()=> {
+    const handleSendData = () => {
         setIsLoading(true)
-        setTimeout(()=> setIsLoading(false), 3000)
+        setTimeout(() => setIsLoading(false), 3000)
     }
 
     return (
         <form className="form">
             <div className='title'>Login</div>
-            <FormControl variant="outlined" sx={{ width: '100%',  color:' rgb(190, 190, 190)' }} className='input' >
+            <FormControl variant="outlined" sx={{ width: '100%' }} className='input' >
                 <TextField
                     id="email"
                     label="Email"
                     variant="outlined"
                     size='small'
                     error={isError}
+                    autoComplete={false}
+                    sx={{
+                        input: { color: '#ffffff' },
+                        label: { color: '#a3a3a3' },
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                // borderColor: '#90caf9',
+                            },
+                            '&:hover fieldset': {
+                                // borderColor: '#ffffff',
+                            },
+                            '&.Mui-focused fieldset': {
+                                // borderColor: '#90caf9',
+                            },
+                        },
+                    }}
                 />
             </FormControl>
-            <FormControl variant="outlined" sx={{ width: '100%' }} className='input'>
-                <InputLabel error={isError} htmlFor="outlined-adornment-password"  size='small'>Password</InputLabel>
+            <FormControl
+                variant="outlined"
+                sx={{
+                    width: '100%',
+                    input: { color: '#ffffff' },
+                    label: { color: '#a3a3a3' },
+                    '& .MuiInputBase-root': {
+                        '& .MuiInputAdornment-root': {
+                            '& .MuiButtonBase-root': {
+                                // borderColor: '#90caf9',
+                                color: '#a3a3a3'
+                            }
+                        },
+                        '&:hover fieldset': {
+                            // borderColor: '#ffffff',
+                        },
+                        '&.Mui-focused fieldset': {
+                            // borderColor: '#90caf9',
+                        },
+                    },
+                }} className='input'>
+                <InputLabel error={isError} htmlFor="outlined-adornment-password" size='small'>Password</InputLabel>
                 <OutlinedInput
                     error={isError}
                     id="outlined-adornment-password"
@@ -65,10 +101,10 @@ export const LoginForm = () => {
                     label="Password"
                 />
             </FormControl>
-            <Button 
-            variant="contained" 
-            onClick={handleSendData}
-            disabled={isLoading}
+            <Button
+                variant="contained"
+                onClick={handleSendData}
+                disabled={isLoading}
             >{isLoading ? <Loader /> : 'SEND'}</Button>
         </form>
     )

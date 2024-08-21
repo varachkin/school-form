@@ -4,6 +4,7 @@ import { setupStore } from "./store/store";
 import { SnackbarProvider } from 'notistack';
 import { ThemeProvider } from "styled-components";
 import { createTheme } from "@mui/material";
+import CssBaseline from '@mui/material/CssBaseline';
 export default function App(props) {
     const store = setupStore()
 
@@ -22,6 +23,7 @@ export default function App(props) {
     return (
         <>
             <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
                 <Provider store={store}>
                     <SnackbarProvider maxSnack={7}>
                         <AppRouter {...props} />
