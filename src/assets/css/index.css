@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(../fonts/Poppins-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Russo';
+    src: local('Russo'), url(../fonts/RussoOne-Regular.ttf) format('truetype');
+}
+
+#root,
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: wheat;
+    font-family: Russo;
+}
+
+:root {
+    --background: linear-gradient(45deg, #131313 55%,#49470e 77%, #232900 90%);
+    --background-main: url(/src/assets/img/BG.png); 
+    --background-main-color: radial-gradient(circle at 50% 50%, #001330 40%, #000000);
+    --background-service: radial-gradient(circle at 165%, rgb(134, 165, 223), #f0efff 65%,rgb(94, 158, 255) 75%, rgb(216, 218, 250) 78%); 
+    --background-extra: none;
+    --button-background: radial-gradient(circle at 10% 10%, #ffbd30, #d39000);
+    --error-gradient: linear-gradient(45deg, #330505,#ff5353, #330505);
+    --waiting-gradient:  linear-gradient(45deg, #331a05,#ff9253, #331605);
+    --warning-gradient: linear-gradient(45deg, #332805,#dda63f, #332805);
+    --success-gradient: linear-gradient(45deg, #053318,#0a8328, #053314);
+    --default-gradient: linear-gradient(45deg, #010a2e, #0c1647 , #183a84 , #020241 );
+    --default-gradient-radial: radial-gradient(#1b2e75, #102754, #0e2558 150%);
+    --radial-card-bg-error:linear-gradient(to right, #870000bb, #1f0909b9);
+    --card-bg-opacity-white:  #c9c9c9a2;
+    --card-shadow: inset -10px -10px 15px rgba(70, 70, 70, 0.12), inset 10px 10px 15px rgba(255, 255, 255, 0.5);
+    --main-color: #131313;
+    --bullet-color: #575757bb;
+    --secondary-color: #e0e0e0;
+    --success-button-bgcolor: radial-gradient(#1dd44b, #0a8328);
+    --service-button-bgcolor: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 15%, rgba(2,83,185,1) 100.2% );
+    --third-color: #cac24b;
+    --third-color-opacity: #ffc40027;
+    --logo-start-screen: url(/src/assets/img/vendinity-logo-white.png);
+    --logo-header: url(/src/assets/img/logo-exa-white-small.png);
+    --logo-full: url(/src/assets/img/exa-logo-white.png);
+    --logo-full-black: url(/src/assets/img/exa-logo-black.png);
+    --service-background-extra: url(/src/assets/img/service-background.webp);
+}
+
+.wrapper{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    background: var(--background-main-color);
+}
+
+.wrapper::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background-main);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.main{
+    width: 100%;
+    padding: 4vw;
+    flex: 1;
+    max-height: 84vh;
+}

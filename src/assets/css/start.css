@@ -1,0 +1,23 @@
+.start_page_wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    font-size: 6vw;
+    gap: 5vw;
+}
+
+.start-page-logo {
+    height: 15%;
+    aspect-ratio: 1/1;
+    background-image: var(--logo-start-screen);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.start_page_container{
+    width: 100%;
+}

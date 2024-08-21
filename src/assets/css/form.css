@@ -1,0 +1,35 @@
+.form{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    padding: 10vw 7vw;
+    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, #00d5ff33 0%, #006aed4a 100.2% );
+    backdrop-filter: blur(8px);
+    border-radius: 5vw;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px inset, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    box-shadow: rgba(0, 0, 0, 0.822) -5px -5px 22px 0px inset;
+}
+
+.form .input {
+    /* display: block;
+    width: 100%;
+    font-size: 6vw;
+    outline: none;
+    border-radius: 1.5vw;
+    padding: 1.5vw;
+    border: none;
+    background: none; */
+    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(21, 44, 49, 0.233) 0%, rgba(19, 35, 54, 0.322) 100.2% );
+    /* backdrop-filter: blur(8px); */
+    color: rgb(190, 190, 190) !important;
+    box-sizing: border-box;
+}
+
+.form button {
+    /* font-size: 6vw; */
+    min-width: 50%;
+}

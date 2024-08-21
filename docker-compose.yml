@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  
+  energy_client:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: ti01
+    ports:
+      - "5000:5000"
+    environment:
+      - SERVER_PORT=5000
+
+ 
