@@ -136,7 +136,7 @@ export const LoginForm = () => {
             <Button
                 variant="contained"
                 onClick={handleSendData}
-                disabled={isLoading || !credentials.email || !credentials.password}
+                disabled={isLoading}
             >{isLoading ? <Loader /> : locales[language].FORM_PAGE.SIGN_IN}</Button>
             <div className='subtitle'>{errorMessage}</div>
         </form>

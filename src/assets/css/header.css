@@ -39,6 +39,7 @@
     font-size: 2.25rem;
     position: sticky;
     z-index: 9;
+    padding: 0 3vw;
     color: rgb(216, 216, 216);
     flex-direction: row-reverse;
 }
@@ -49,7 +50,7 @@
     padding: 0 4vw;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 5vw;
     flex: 1;

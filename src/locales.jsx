@@ -8,43 +8,78 @@ export const locales = {
     languages: ["pl", "en", "de", "fr", "ua"],
     en: {
         FORM_PAGE: {
-            TITLE: 'Login,',
-            EMAIL: 'Email',
-            PASSWORD: 'Password',
-            SIGN_IN: 'Sign in'
+          TITLE: 'Login',
+          EMAIL: 'Email',
+          PASSWORD: 'Password',
+          SIGN_IN: 'Sign in'
         },
-    },
-    pl: {
-        FORM_PAGE: {
-            TITLE: 'Zaloguj się,',
-            EMAIL: 'Email',
-            PASSWORD: 'Hasło',
-            SIGN_IN: 'Zaloguj się'
+        HOME_PAGE: {
+          TAB_1: 'Open box',
+          TAB_2: 'Block box',
+          OPEN: 'OPEN',
+          BLOCK: 'BLOCK',
+          LOG_OUT: 'Logout'
         }
-    },
-    de: {
+      },
+      pl: {
         FORM_PAGE: {
-            TITLE: 'Anmelden,',
-            EMAIL: 'E-Mail',
-            PASSWORD: 'Passwort',
-            SIGN_IN: 'Einloggen'
+          TITLE: 'Zaloguj się',
+          EMAIL: 'Email',
+          PASSWORD: 'Hasło',
+          SIGN_IN: 'Zaloguj się'
+        },
+        HOME_PAGE: {
+          TAB_1: 'Otwórz skrzynkę',
+          TAB_2: 'Zablokuj skrzynkę',
+          OPEN: 'OTWÓRZ',
+          BLOCK: 'ZABLOKUJ',
+          LOG_OUT: 'Wyloguj się'
         }
-    },
-    fr: {
+      },
+      de: {
         FORM_PAGE: {
-            TITLE: 'Connexion,',
-            EMAIL: 'E-mail',
-            PASSWORD: 'Mot de passe',
-            SIGN_IN: 'Se connecter'
+          TITLE: 'Anmelden',
+          EMAIL: 'E-Mail',
+          PASSWORD: 'Passwort',
+          SIGN_IN: 'Einloggen'
+        },
+        HOME_PAGE: {
+          TAB_1: 'Kiste öffnen',
+          TAB_2: 'Kiste sperren',
+          OPEN: 'ÖFFNEN',
+          BLOCK: 'SPERREN',
+          LOG_OUT: 'Abmelden'
         }
-    },
-    ua: {
+      },
+      fr: {
         FORM_PAGE: {
-            TITLE: 'Увійти,',
-            EMAIL: 'Електронна пошта',
-            PASSWORD: 'Пароль',
-            SIGN_IN: 'Увійти'
+          TITLE: 'Connexion',
+          EMAIL: 'E-mail',
+          PASSWORD: 'Mot de passe',
+          SIGN_IN: 'Se connecter'
+        },
+        HOME_PAGE: {
+          TAB_1: 'Ouvrir la boîte',
+          TAB_2: 'Bloquer la boîte',
+          OPEN: 'OUVRIR',
+          BLOCK: 'BLOQUER',
+          LOG_OUT: 'Déconnexion'
         }
-    }
+      },
+      ua: {
+        FORM_PAGE: {
+          TITLE: 'Увійти',
+          EMAIL: 'Електронна пошта',
+          PASSWORD: 'Пароль',
+          SIGN_IN: 'Увійти'
+        },
+        HOME_PAGE: {
+          TAB_1: 'Відкрити коробку',
+          TAB_2: 'Заблокувати коробку',
+          OPEN: 'ВІДКРИТИ',
+          BLOCK: 'ЗАБЛОКУВАТИ',
+          LOG_OUT: 'Вийти'
+        }
+      }
 }
 

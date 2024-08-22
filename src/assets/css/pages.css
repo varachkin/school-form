@@ -42,12 +42,32 @@
     font-family: Russo, san-serif;
     font-weight: 500;
     letter-spacing: 0.1rem;
-    color: var(--secondary-color)
+    color: var(--secondary-color);
 }
 
+.title-left{
+    text-align: center;
+    width: 100%;
+    font-size: 6vw;
+    padding: 3vh 0;
+    font-weight: 700;
+    font-family: Russo, san-serif;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: var(--secondary-color);
+}
+
+.title-left a{
+    display: flex;
+    align-items: center;
+    font-size: 6vw;
+}
+.title-left svg{
+    font-size: 8vw;
+}
 .subtitle{
     font-size: 3vw;
-    color: rgb(97, 2, 2);
+    color: #cf8787;
     width: 80%;
     text-align: center;
     margin: 0 auto;
