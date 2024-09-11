@@ -5,9 +5,10 @@ import Box from '@mui/material/Box';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { locales } from '../../../locales';
-import React, { useState } from 'react';
-import { Button, FormControl, TextField } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Button, FormControl, TextField, Typography } from '@mui/material';
 import Loader from '../Loader/Loader';
+import { fetchOpenBox } from '../../../API';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,19 +46,50 @@ export default function BasicTabs() {
   const [isLoading, setIsLoading] = useState(false);
   const [number, setNumber] = useState('')
   const [isError, setIsError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('')
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('aafasfas')
+  const [successMessage, setSuccessMessage] = useState('aafasfas')
+
   const [user, setUser] = useState(null)
   let navigate = useNavigate();
 
-  const handleSendData = () => {
-
+  const handleOpen = () => {
+    setIsLoading(true)
+    fetchOpenBox(number)
+    .then(response => {
+      if(response.status === 200){
+          setIsSuccess(true)
+          setSuccessMessage('Box was opened')
+      }else{
+          setIsError(true)
+          setErrorMessage('Box was NOT opened')
+      }
+    })
+    .catch(error => {
+      setIsError(true)
+          setErrorMessage(error.message)
+    })
+    .finally(()=> {
+      setNumber('')
+      setIsLoading(false)
+    })
   }
 
   const handleChangeInput = (event) => {
-    setNumber(event.target.value)
+    setIsError(false)
+    setIsSuccess(false)
+    setErrorMessage(false)
+    setSuccessMessage(false)
+    if(event.target.value){
+      setNumber(+event.target.value)
+    }else{
+      setNumber('')
+    }
+    
   }
 
   const handleChange = (event, newValue) => {
+    console.log(event)
     setValue(newValue);
   };
 
@@ -66,7 +98,7 @@ export default function BasicTabs() {
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" className='tabs-header'>
           <Tab label={locales[language].HOME_PAGE.TAB_1} {...a11yProps(0)} sx={{ flex: 1, color: '#fff' }} />
-          <Tab label={locales[language].HOME_PAGE.TAB_2} {...a11yProps(1)} sx={{ flex: 1, color: '#fff' }} />
+          {/* <Tab label={locales[language].HOME_PAGE.TAB_2} {...a11yProps(1)} sx={{ flex: 1, color: '#fff' }} /> */}
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -90,11 +122,13 @@ export default function BasicTabs() {
           </FormControl>
           <Button
             variant="contained"
-            onClick={handleSendData}
-            disabled={isLoading}
+            disabled={!number || isLoading}
+            onClick={handleOpen}
           >
             {isLoading ? <Loader /> : locales[language].HOME_PAGE.OPEN}
           </Button>
+          {isError && <Typography color='error'>{errorMessage}</Typography>}
+          {isSuccess && <div>{successMessage}</div>}
         </form>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
@@ -118,7 +152,6 @@ export default function BasicTabs() {
           </FormControl>
           <Button
             variant="contained"
-            onClick={handleSendData}
             disabled={isLoading}
             color='warning'
           >

@@ -37,7 +37,7 @@
     text-align: center;
     max-width: 85%;
     margin: 0 auto;
-    font-size: 6vw;
+    font-size: 5.25vw;
     font-weight: 700;
     font-family: Russo, san-serif;
     font-weight: 500;
@@ -60,7 +60,7 @@
 .title-left a{
     display: flex;
     align-items: center;
-    font-size: 6vw;
+    font-size: 4.5vw;
 }
 .title-left svg{
     font-size: 8vw;
