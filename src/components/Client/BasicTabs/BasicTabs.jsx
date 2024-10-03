@@ -50,12 +50,9 @@ export default function BasicTabs() {
   const [errorMessage, setErrorMessage] = useState('aafasfas')
   const [successMessage, setSuccessMessage] = useState('aafasfas')
 
-  const [user, setUser] = useState(null)
-  let navigate = useNavigate();
-
   const handleOpen = () => {
     setIsLoading(true)
-    fetchOpenBox(number)
+    fetchOpenBox(number, serial)
     .then(response => {
       if(response.status === 200){
           setIsSuccess(true)

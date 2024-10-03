@@ -37,10 +37,11 @@ export const login = (credentials) => {
     });
 }
 
-export const fetchOpenBox = (locker_number) => {
+export const fetchOpenBox = (locker_number, serial) => {
   return axios
     .post(`${DEVICE_BACKEND_ADDRESS}/api/v1/devices/locker/opening`, {
-      locker_number: locker_number
+      locker_number: locker_number,
+      serial: serial,
     }, {
       headers: {
         'accept': 'application/json',

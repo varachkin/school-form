@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     language: 'pl',
-    serial: 'CLK01-999-99-98',
-    // serial: 'CLK01-024-22-24',
+    // serial: 'TI01-001-24',
+    serial: 'TI01-002-24',
 }
 export const actionsSlice = createSlice({
     name: 'actions',
@@ -14,39 +14,11 @@ export const actionsSlice = createSlice({
         setSerialOfMachine: (state, actions) => {
             state.serial = actions.payload
         },
-        changeDevMode: (state) => {
-            state.devMode = !state.devMode
-        },
-        changeEmployeeMode: (state) => {
-            state.employeeMode = !state.employeeMode
-        },
-        changePreAuthorizationTerminal: (state) => {
-            state.terminal_preauthorization_payment = !state.terminal_preauthorization_payment
-        },
-        changeQRCodeMode: (state) => {
-            state.QRCodeMode = !state.QRCodeMode
-        },
-        changeMobileAppMode: (state) => {
-            state.mobileAppMode = !state.mobileAppMode
-        },
-        setTechBreak: (state, actions) => {
-            state.technical_break = actions.payload
-        },
-        setCheckingTechnicalBreak: (state, actions) => {
-            state.isCheckingTechBreak = actions.payload
-        }
     }
 })
 
 export const { 
     changeLanguage, 
     setSerialOfMachine, 
-    changeDevMode, 
-    setTechBreak, 
-    setCheckingTechnicalBreak, 
-    changeQRCodeMode, 
-    changeMobileAppMode, 
-    changeEmployeeMode,
-    changePreAuthorizationTerminal
 } = actionsSlice.actions;
 export default actionsSlice.reducer;
